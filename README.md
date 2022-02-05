@@ -58,6 +58,117 @@ It is possible to list all of the versions of `scrape-search-engine` available o
 conda search scrape-search-engine --channel conda-forge
 ```
 
+## How to import the module:
+```python
+userAgent = ('') #search on google "my user agent"
+search = ('')  #Enter Anything for Search
+```
+## Google Search Engine : 
+```python
+from ScrapeSearchEngine.ScrapeSearchEngine import Google
+
+google = Google(search, userAgent)
+
+print(google)
+```
+## Duckduckgo Search Engine : 
+```python
+from ScrapeSearchEngine.ScrapeSearchEngine import Duckduckgo
+
+duckduckgo = Duckduckgo(search, userAgent)
+
+print(duckduckgo)
+```
+## Givewater Search Engine : 
+```python
+from ScrapeSearchEngine.ScrapeSearchEngine import Givewater
+
+givewater = Givewater(search, userAgent)
+
+print(givewater)
+```
+## Ecosia Search Engine : 
+```python
+from ScrapeSearchEngine.ScrapeSearchEngine import Ecosia
+
+ecosia = Ecosia(search, userAgent)
+
+print(ecosia)
+```
+## Bing Search Engine : 
+```python
+from ScrapeSearchEngine.ScrapeSearchEngine import Bing
+
+bing = Bing(search, userAgent)
+
+print(bing)
+```
+## Yahoo Search Engine : 
+```python
+from ScrapeSearchEngine.ScrapeSearchEngine import Yahoo
+
+yahoo = Yahoo(search, userAgent)
+
+print(yahoo)
+```
+## Scrape Search Engine With Text and Link :
+
+Search anything on the different Search Engine's it will collect all the links with corresponding text.
+
+## Google Search Engine : 
+```python
+from ScrapeSearchEngine.SearchEngine import Google
+
+googleText, googleLink = Google(search, userAgent)
+
+print(googleText)
+print(googleLink)
+```
+## Duckduckgo Search Engine : 
+```python
+from ScrapeSearchEngine.SearchEngine import Duckduckgo
+
+duckduckgoText, duckduckgoLink = Duckduckgo(search, userAgent)
+
+print(duckduckgoText)
+print(duckduckgoLink)
+```
+## Givewater Search Engine : 
+```python
+from ScrapeSearchEngine.SearchEngine import Givewater
+
+givewaterText, givewaterLink = Givewater(search, userAgent)
+
+print(givewaterText)
+print(givewaterLink)
+```
+## Ecosia Search Engine : 
+```python
+from ScrapeSearchEngine.SearchEngine import Ecosia
+
+ecosiaText, ecosiaLink = Ecosia(search, userAgent)
+
+print(ecosiaText)
+print(ecosiaLink)
+```
+## Bing Search Engine : 
+```python
+from ScrapeSearchEngine.SearchEngine import Bing
+
+bingText, bingLink = Bing(search, userAgent)
+
+print(bingText)
+print(bingLink)
+```
+## Yahoo Search Engine : 
+```python
+from ScrapeSearchEngine.SearchEngine import Yahoo
+
+yahooText, yahooLink = Yahoo(search, userAgent)
+
+print(yahooText)
+print(yahooLink)
+```
 
 About conda-forge
 =================
