@@ -1,11 +1,11 @@
-About scrape-search-engine
-==========================
+About scrape-search-engine-feedstock
+====================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scrape-search-engine-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/sujitmandal/scrape-search-engine
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/scrape-search-engine-feedstock/blob/master/LICENSE.txt)
 
 Summary: Search anything on the different Search Engine's it will collect all the links.
 
@@ -19,8 +19,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15290&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/scrape-search-engine-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=15290&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/scrape-search-engine-feedstock?branchName=main">
       </a>
     </td>
   </tr>
@@ -33,9 +33,6 @@ Current release info
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-scrape--search--engine-green.svg)](https://anaconda.org/conda-forge/scrape-search-engine) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/scrape-search-engine.svg)](https://anaconda.org/conda-forge/scrape-search-engine) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scrape-search-engine.svg)](https://anaconda.org/conda-forge/scrape-search-engine) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/scrape-search-engine.svg)](https://anaconda.org/conda-forge/scrape-search-engine) |
 
-[![Build Status](https://travis-ci.org/sujitmandal/scrape-search-engine.svg?branch=master)](https://travis-ci.org/sujitmandal/scrape-search-engine) [![GitHub license](https://img.shields.io/github/license/sujitmandal/scrape-search-engine)](https://github.com/sujitmandal/scrape-search-engine/blob/master/LICENSE) ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/scrape-search-engine) ![PyPI - Wheel](https://img.shields.io/pypi/wheel/scrape-search-engine) ![PyPI](https://img.shields.io/pypi/v/scrape-search-engine) [![Conda Version](https://img.shields.io/conda/vn/conda-forge/scrape-search-engine.svg)](https://anaconda.org/conda-forge/scrape-search-engine) [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scrape-search-engine/badges/version.svg)](https://anaconda.org/conda-forge/scrape-search-engine) [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scrape-search-engine/badges/installer/conda.svg)](https://conda.anaconda.org/conda-forge) [![Anaconda-Server Badge](https://anaconda.org/conda-forge/scrape-search-engine/badges/platforms.svg)](https://anaconda.org/conda-forge/scrape-search-engine)
-
-
 Installing scrape-search-engine
 ===============================
 
@@ -46,129 +43,43 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `scrape-search-engine` can be installed with:
+Once the `conda-forge` channel has been enabled, `scrape-search-engine` can be installed with `conda`:
 
 ```
 conda install scrape-search-engine
 ```
 
-It is possible to list all of the versions of `scrape-search-engine` available on your platform with:
+or with `mamba`:
+
+```
+mamba install scrape-search-engine
+```
+
+It is possible to list all of the versions of `scrape-search-engine` available on your platform with `conda`:
 
 ```
 conda search scrape-search-engine --channel conda-forge
 ```
 
-## How to import the module:
-```python
-userAgent = ('') #search on google "my user agent"
-search = ('')  #Enter Anything for Search
+or with `mamba`:
+
 ```
-## Google Search Engine : 
-```python
-from ScrapeSearchEngine.ScrapeSearchEngine import Google
-
-google = Google(search, userAgent)
-
-print(google)
+mamba search scrape-search-engine --channel conda-forge
 ```
-## Duckduckgo Search Engine : 
-```python
-from ScrapeSearchEngine.ScrapeSearchEngine import Duckduckgo
 
-duckduckgo = Duckduckgo(search, userAgent)
+Alternatively, `mamba repoquery` may provide more information:
 
-print(duckduckgo)
 ```
-## Givewater Search Engine : 
-```python
-from ScrapeSearchEngine.ScrapeSearchEngine import Givewater
+# Search all versions available on your platform:
+mamba repoquery search scrape-search-engine --channel conda-forge
 
-givewater = Givewater(search, userAgent)
+# List packages depending on `scrape-search-engine`:
+mamba repoquery whoneeds scrape-search-engine --channel conda-forge
 
-print(givewater)
+# List dependencies of `scrape-search-engine`:
+mamba repoquery depends scrape-search-engine --channel conda-forge
 ```
-## Ecosia Search Engine : 
-```python
-from ScrapeSearchEngine.ScrapeSearchEngine import Ecosia
 
-ecosia = Ecosia(search, userAgent)
-
-print(ecosia)
-```
-## Bing Search Engine : 
-```python
-from ScrapeSearchEngine.ScrapeSearchEngine import Bing
-
-bing = Bing(search, userAgent)
-
-print(bing)
-```
-## Yahoo Search Engine : 
-```python
-from ScrapeSearchEngine.ScrapeSearchEngine import Yahoo
-
-yahoo = Yahoo(search, userAgent)
-
-print(yahoo)
-```
-## Scrape Search Engine With Text and Link :
-
-Search anything on the different Search Engine's it will collect all the links with corresponding text.
-
-## Google Search Engine : 
-```python
-from ScrapeSearchEngine.SearchEngine import Google
-
-googleText, googleLink = Google(search, userAgent)
-
-print(googleText)
-print(googleLink)
-```
-## Duckduckgo Search Engine : 
-```python
-from ScrapeSearchEngine.SearchEngine import Duckduckgo
-
-duckduckgoText, duckduckgoLink = Duckduckgo(search, userAgent)
-
-print(duckduckgoText)
-print(duckduckgoLink)
-```
-## Givewater Search Engine : 
-```python
-from ScrapeSearchEngine.SearchEngine import Givewater
-
-givewaterText, givewaterLink = Givewater(search, userAgent)
-
-print(givewaterText)
-print(givewaterLink)
-```
-## Ecosia Search Engine : 
-```python
-from ScrapeSearchEngine.SearchEngine import Ecosia
-
-ecosiaText, ecosiaLink = Ecosia(search, userAgent)
-
-print(ecosiaText)
-print(ecosiaLink)
-```
-## Bing Search Engine : 
-```python
-from ScrapeSearchEngine.SearchEngine import Bing
-
-bingText, bingLink = Bing(search, userAgent)
-
-print(bingText)
-print(bingLink)
-```
-## Yahoo Search Engine : 
-```python
-from ScrapeSearchEngine.SearchEngine import Yahoo
-
-yahooText, yahooLink = Yahoo(search, userAgent)
-
-print(yahooText)
-print(yahooLink)
-```
 
 About conda-forge
 =================
@@ -184,10 +95,12 @@ for each of the installable packages. Such a repository is known as a *feedstock
 A feedstock is made up of a conda recipe (the instructions on what and how to build
 the package) and the necessary configurations for automatic building using freely
 available continuous integration services. Thanks to the awesome service provided by
-[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/)
-and [TravisCI](https://travis-ci.com/) it is possible to build and upload installable
-packages to the [conda-forge](https://anaconda.org/conda-forge)
-[Anaconda-Cloud](https://anaconda.org/) channel for Linux, Windows and OSX respectively.
+[Azure](https://azure.microsoft.com/en-us/services/devops/), [GitHub](https://github.com/),
+[CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
+[Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
+it is possible to build and upload installable packages to the
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
+channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
 [conda-smithy](https://github.com/conda-forge/conda-smithy) has been developed.

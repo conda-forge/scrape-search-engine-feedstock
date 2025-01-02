@@ -10,20 +10,22 @@ source:
   sha256: c1d6093053e54558d1a883608285e143363512df123699647a5353ee6e068c27
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . -vv"
 
 requirements:
   host:
     - pip
-    - python >=3.6
+    - python {{ python_min }}
   run:
     - bs4
     - requests
-    - python >=3.6
+    - python >={{ python_min }}
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - ScrapeSearchEngine
 
